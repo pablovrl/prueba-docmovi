@@ -10,7 +10,7 @@ export default function Pacientes() {
   return (
     <>
       <Heading>Pacientes</Heading>
-      <Box>
+      <Box overflowX="auto">
         <Table variant='striped' colorScheme='purple' size="md">
           <Thead>
             <Tr>

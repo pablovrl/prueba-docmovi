@@ -7,6 +7,7 @@ import { validateRut, formatRut } from 'rutlib/lib'
 
 export default function Formulario() {
 
+  // Uso un input controlado para la región, para así validar en tiempo real la comuna
   const [region, setRegion] = useState("")
   const { register, handleSubmit, reset} = useForm()
 
