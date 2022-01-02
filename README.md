@@ -11,7 +11,7 @@ Prueba técnica para la empresa Docmovi.
 
 ## Ejecutar
 
-### Installar dependencias
+### Instalar dependencias
 
 ```bash
 meteor npm install
