@@ -9,9 +9,9 @@ Prueba técnica para la empresa Docmovi.
 <img src="https://i.ibb.co/NrsC86J/docmovi2.png" width="24%"></img> 
 <img src="https://i.ibb.co/2cRTPxG/docmovi1.jpg" width="45%"></img>
 
-## Ejecutar
+## Ejecutar Proyecto
 
-### Installar dependencias
+### Instalar dependencias
 
 ```bash
 meteor npm install
