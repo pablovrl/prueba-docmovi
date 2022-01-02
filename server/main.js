@@ -17,7 +17,7 @@ Meteor.startup(() => {
       nombre: "Pablo",
       apellidoPaterno: "Villarroel",
       apellidoMaterno: "Antillanca",
-      rut: "20487087-K",
+      rut: "20.487.087-K",
       region: "Región del Bíobio",
       comuna: "Concepción"
     })

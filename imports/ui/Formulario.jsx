@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import regiones from '../../regiones'
 import { PacientesCollection } from '../api/PacientesCollection'
 import { validateRut, formatRut } from 'rutlib/lib'
+import InputConLabel from './InputConLabel'
 
 export default function Formulario() {
 
@@ -16,7 +17,7 @@ export default function Formulario() {
     paciente["region"] = region
 
     if(!validateRut(paciente.rut)) {
-      alert("Rut inválido")
+      alert("Por favor ingrese un RUT válido.")
     } else {
       paciente["rut"] = formatRut(paciente.rut)
       PacientesCollection.insert(paciente)
@@ -33,22 +34,12 @@ export default function Formulario() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <Heading my={5}>Crear Paciente</Heading>
       <SimpleGrid spacing={"24px"} columns={{ base: 1, md: 2 }}>
-        <FormControl>
-          <FormLabel>Nombre</FormLabel>
-          <Input {...register("nombre", {required: true})} placeholder='Nombre'/>
-        </FormControl>
-        <FormControl>
-          <FormLabel>Apellido Paterno</FormLabel>
-          <Input {...register("apellidoPaterno", {required: true})} placeholder='Apellido Paterno'/>
-        </FormControl>
-        <FormControl>
-          <FormLabel>Apellido Materno</FormLabel>
-          <Input {...register("apellidoMaterno", {required: true})} placeholder='Apellido Materno'/>
-        </FormControl>
-        <FormControl>
-          <FormLabel>RUT</FormLabel>
-          <Input maxLength={12} {...register("rut", {required: true})} placeholder='RUT' />
-        </FormControl>
+        
+        <InputConLabel label="Nombre" id="nombre" register={register} />
+        <InputConLabel label="Apellido Paterno" id="apellidoPaterno" register={register}/>
+        <InputConLabel label="Apellido Materno" id="apellidoMaterno" register={register}/>
+        <InputConLabel label="RUT" id="rut" register={register}/>
+        
         <FormControl>
           <FormLabel>Región</FormLabel>
           <Select onChange={handleChange} defaultValue={""}>
@@ -60,6 +51,7 @@ export default function Formulario() {
             ))}
           </Select>
         </FormControl>
+
         <FormControl>
           <FormLabel>Comuna</FormLabel>
           <Select {...register("comuna", {required: true})} defaultValue={""} disabled={region === ""}>
@@ -71,6 +63,7 @@ export default function Formulario() {
             })}
           </Select>
         </FormControl>
+
       </SimpleGrid>
       <Flex my={2} justifyContent="end">
         <Button width={{base: "100%", md:"20rem"}} type='submit'>Submit</Button>
