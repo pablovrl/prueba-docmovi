@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTracker } from 'meteor/react-meteor-data';
 import { PacientesCollection } from '../api/PacientesCollection';
-import { Box, Heading, Table, Tbody, Td, Th, Thead, Tr, VStack } from '@chakra-ui/react';
+import { Box, Heading, Table, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react';
 
 export default function Pacientes() {
 

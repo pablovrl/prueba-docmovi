@@ -9,6 +9,7 @@ export default function Formulario() {
 
   const [region, setRegion] = useState("")
   const { register, handleSubmit, reset} = useForm()
+
   const onSubmit = data => {
     const paciente = data
     paciente["region"] = region
@@ -34,15 +35,15 @@ export default function Formulario() {
       <SimpleGrid spacing={"24px"} columns={{ base: 1, md: 2 }}>
         <FormControl>
           <FormLabel>Nombre</FormLabel>
-          <Input {...register("nombre", {required: true})} placeholder='Nombre' />
+          <Input {...register("nombre", {required: true})} placeholder='Nombre'/>
         </FormControl>
         <FormControl>
           <FormLabel>Apellido Paterno</FormLabel>
-          <Input {...register("apellidoPaterno", {required: true})} placeholder='Apellido Paterno' />
+          <Input {...register("apellidoPaterno", {required: true})} placeholder='Apellido Paterno'/>
         </FormControl>
         <FormControl>
           <FormLabel>Apellido Materno</FormLabel>
-          <Input {...register("apellidoMaterno", {required: true})} placeholder='Apellido Materno' />
+          <Input {...register("apellidoMaterno", {required: true})} placeholder='Apellido Materno'/>
         </FormControl>
         <FormControl>
           <FormLabel>RUT</FormLabel>
