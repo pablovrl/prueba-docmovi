@@ -23,7 +23,6 @@ export default function Formulario() {
     }
   }
 
-
   const handleChange = (evt) => {
     setRegion(evt.target.value)
 
@@ -65,6 +64,7 @@ export default function Formulario() {
           <Select {...register("comuna", {required: true})} defaultValue={""} disabled={region === ""}>
             <option value="" disabled hidden>Seleccione aquí</option>
             {regiones.map(ubicacion => {
+              // Mostrar sólo las comunas de la región seleccionada 
               if (ubicacion.region === region)
                 return ubicacion.comunas.map(comuna => <option key={comuna} value={comuna}>{comuna}</option>)
             })}
