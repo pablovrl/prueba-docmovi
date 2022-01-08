@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Button, Input, SimpleGrid, Heading, Select, VStack, Flex, FormLabel, FormControl } from '@chakra-ui/react'
+import React, { useState, useEffect } from 'react'
+import { Button, Input, SimpleGrid, Heading, Select, Flex, FormLabel, FormControl } from '@chakra-ui/react'
 import { useForm } from 'react-hook-form'
 import regiones from '../../regiones'
 import { PacientesCollection } from '../api/PacientesCollection'
@@ -10,7 +10,11 @@ export default function Formulario() {
 
   // Uso un input controlado para la región, para así validar en tiempo real la comuna
   const [region, setRegion] = useState("")
-  const { register, handleSubmit, reset} = useForm()
+  const { register, handleSubmit, reset, resetField} = useForm()
+
+  useEffect(() => {
+    resetField('comuna')
+  }, [region])
 
   const onSubmit = data => {
     const paciente = data
