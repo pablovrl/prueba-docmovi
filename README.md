@@ -1,6 +1,8 @@
 # Prueba técnica DOCMOVI
 Prueba técnica para la empresa Docmovi.
 
+[Puedes encontrar las instrucciones aquí!](https://github.com/fvergaracl/prueba-tecnica-42)
+
 ## Tecnologías utilizadas
 - Meteor
 - Chakra UI
