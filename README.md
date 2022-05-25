@@ -11,14 +11,17 @@ Prueba técnica para la empresa Docmovi.
 
 ## Ejecutar Proyecto
 
-### Instalar dependencias
+### Instalar meteor
+```bash
+npm install -g meteor
+```
 
+### Instalar dependencias
 ```bash
 meteor npm install
 ```
 
-### Ejecutar
-
+### Ejecutar projecto
 ```bash
 meteor
 ```
